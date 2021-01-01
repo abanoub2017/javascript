@@ -57,41 +57,78 @@
 // }
 // document.getElementById('demo').innerHTML = text
 
-// IF condation
-var userList = [
-    {
-        firstName: 'Abanoub',
-        age: 28,
-        role: 'admin'
-    },
-    {
-        firstName: 'Abanoub',
-        age: 28,
-        role: 'user'
-    }
-]
 
-for (var user of userList) {
-   console.log(user.role);
+
+// Add User to Table
+let userDetails = {}
+let listUser = []
+
+function addListUser(event){
+  event.preventDefault()
+    //   
+    let name = document.getElementById('name');
+    let email = document.getElementById('email');
+    let mobile = document.getElementById('mobile');
+    let password = document.getElementById('password');
+    //   
+    userDetails.name = name.value;
+    userDetails.email = email.value;
+    userDetails.mobile = mobile.value;
+    userDetails.password = password.value;
+
+    //
+    listUser.push(userDetails)  
+    
+    // 
+     let table = ''
+      // your loop here
+      for (var user of listUser) {
+          table += 
+            `
+            <tr>
+                <td>${user.name}</td>
+                <td>${user.email}</td>
+                <td>${user.mobile}</td>
+                <td>${user.password}</td>
+            </tr>
+
+            `
+      }
+      document.getElementById('tbody').innerHTML = table
+    
+
+    // 
+    console.log(listUser)
+    console.log(userDetails)
+    userDetails = {}
+    name.value = ''
+    email.value = ''
+    mobile.value= ''
+    password.value = ''
 }
 
-var listOfNewUser = []
+// Sec Ex (classList.remove)
+var p = document.getElementById('p')
+var changeStatus = false
 
-function generalAddUser(){
-    var item = ''
-    for(x of listOfNewUser){
-        item += `<p>${x} </p> `
-    }
-    document.getElementById('userName').innerHTML = item
+function toggleColor(event) {
+  event.preventDefault()
+  changeStatus = !changeStatus
+  if (changeStatus) {
+    p.classList.add('mystyle')
+    console.log('enter');
+  } else {
+    console.log('out');
+    p.classList.remove('mystyle')
+  }  
 }
-function addUser(){
-  var test =  document.getElementById('inputFiled').value
-  
-    document.getElementById('userName').innerHTML = test
-    // make empty after add 
-    document.getElementById('inputFiled').value = ''
-    // Add user
-    listOfNewUser.push(test)
-    // Loop and in html
-    generalAddUser()
+
+
+// Therd Ex (Side menu)
+var menu = document.getElementById('menu')
+var changeMenu = false
+
+function toggelMenu(event) {
+  event.preventDefault()
+  menu.classList.toggle('show')
 }

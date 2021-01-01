@@ -1,20 +1,116 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        
+    }
+    .mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+}
+.side-menu{
+    background-color: #000;
+    color: #fff;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150px;
+    transform: translateX(-150px);
+    transition: all .3s ease-in-out;
+}
+.show{
+    transform: translateX(0);
+}
+
+.side-menu .toggle{
+    position: relative;
+}
+.side-menu .toggle div{
+    position: absolute;
+    right: -14px;
+    top: 0;
+    background: #000;
+    font-size: 20px;
+}
+</style>
 </head>
+
 <body>
-    
-    
 
-    <input type="text" id="inputFiled">
-    <button onclick="addUser()">Add</button>
+    <!-- Side menu -->
+    <div class="side-menu " id="menu">
+        <div class="toggle" onclick="toggelMenu(event)">
+            <div>X</div>
+        </div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Our Client</li>
+        </ul>
+    </div>
 
-    <label for="">User Name :</label>
-    <span id="userName"></span>
-    <div id="demo"></div>
+    <!-- First -->
+    <form>
+        <!-- User Name   -->
+        <label>User Name</lable>
+            <input type="text" id="name" required />
+            <br />
+            <br />
+            <!-- Email   -->
+            <label>Email</lable>
+                <input type="email" id="email"  required/>
+                <br />
+                <br />
+                <!-- Mobile   -->
+                <label>Mobile</lable>
+                    <input type="number" id="mobile" required />
+                    <br />
+                    <br />
+                    <!-- Password   -->
+                    <label>Password</lable>
+                        <input type="password" id="password"  required/>
+                        <br />
+                        <br />
+                        <input type='button' onclick="addListUser(event)" value="Add User">
+                        <button type='button' onclick="addListUser(event)">Add User</button>
+            
+    </form>
+
+    <table>
+        <tr>
+            <th>name</th>
+            <th>email</th>
+            <th>mobile</th>
+            <th>Password</th>
+        </tr>
+        <tbody id="tbody">
+            <td>sss</td>
+            <td>sss</td>
+            <td>sss</td>
+        </tbody>
+    </table>
+  
+    <!-- Sec -->
+    <button onclick="toggleColor(event)">Change Color</button>
+    <p id="p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius nobis quasi dolorum eveniet dignissimos suscipit!
+        Natus omnis sint illo nam aut quidem quaerat atque dolore, pariatur doloribus qui laudantium quos!
+    
+    </p>
     <!-- JavaScript -->
     <script src="./main.js"></script>
 </body>
+
 </html>

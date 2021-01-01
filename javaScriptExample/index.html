@@ -1,0 +1,98 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script Example</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Side menu -->
+<div class="side-menu" id="sideMenu">
+    <div class="close">
+        <p onclick="toggleMenu(event)">X</p>
+    </div>
+    <div class="side-content">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+</div>
+    <div class="form mt-5">
+        <div class="container">
+            <!-- <a href="tel:0101631474">call me</a> -->
+            <!-- Form Example -->
+            <div class="row">
+                <!-- Right Side -->
+                <div class="col-md-6">
+                    <form>
+                        <!-- User Name -->
+                        <div class="mb-3">
+                            <label class="form-label">User Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <!-- Mobile Number -->
+                        <div class="mb-3">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="number" class="form-control" id="mobile">
+                        </div>
+                        <!-- Password -->
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary" onclick="addUser(event)">Add User</button>
+                    </form>
+                </div>
+                <!-- Left Side -->
+                <div class="col-md-6">
+                    <table class="table table-striped table-hover table-bordered shadow table-responsive">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">User Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Mobile</th>
+                                <th scope="col">Password</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <hr>
+            <!-- Add CLass and remove class -->
+            <h2 class="text-center my-3">Use Add Class and Remove Class </h2>
+            <div class="text-center my-3">
+                <button onclick="changeStyle(event)" class="btn btn-info my-3 ">Change Style</button>
+                <p id="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quaerat praesentium, hic maxime ex
+                    velit non eaque repellat, modi aspernatur, eum impedit! Repellendus magni quasi quos odit culpa
+                    temporibus ab.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <!-- Bootstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
